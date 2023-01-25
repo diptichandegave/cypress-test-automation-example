@@ -1,0 +1,184 @@
+[
+  {
+    "description": "    Home Page testing scenarios",
+    "keyword": "Feature",
+    "name": "homePage",
+    "line": 1,
+    "id": "homepage",
+    "tags": [],
+    "uri": "homePage.feature",
+    "elements": [
+      {
+        "id": "homepage;verify-when-user-open-the-url-it-should-work-properly",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Verify when user open the URL it should work properly",
+        "tags": [
+          {
+            "name": "@happy-path",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the URL to get music festival data",
+            "result": {
+              "status": "passed",
+              "duration": 10912000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I verify URL is working",
+            "result": {
+              "status": "passed",
+              "duration": 967000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "homepage;verify-band-and-festival-combination-is-unique",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Verify band and festival combination is unique",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 10
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I open the URL to get music festival data",
+            "result": {
+              "status": "passed",
+              "duration": 8942000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I verify URL is working",
+            "result": {
+              "status": "passed",
+              "duration": 366000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I verify band and music festival combination is unique",
+            "result": {
+              "status": "passed",
+              "duration": 1455000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "homepage;verify-each-band-should-have-music-festival-name",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Verify each band should have music festival name",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 16
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I open the URL to get music festival data",
+            "result": {
+              "status": "passed",
+              "duration": 8875000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I verify URL is working",
+            "result": {
+              "status": "failed",
+              "duration": 6084000000,
+              "error_message": "AssertionError: Timed out retrying: Expected to find element: `app-festivals ol li`, but never found it.\n    + expected - actual\n\n\n    at ensureExistence (http://localhost:4200/__cypress/runner/cypress_runner.js:137673:32)\n    at Object.ensureElExistence (http://localhost:4200/__cypress/runner/cypress_runner.js:137691:12)\n    at ensureExistence (http://localhost:4200/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (http://localhost:4200/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (http://localhost:4200/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (http://localhost:4200/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (http://localhost:4200/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (http://localhost:4200/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (http://localhost:4200/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (http://localhost:4200/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (http://localhost:4200/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:4200/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (http://localhost:4200/__cypress/runner/cypress_runner.js:3651:14)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I verify each band should have music festival name",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "homepage;verify-band-and-festival-names-follow-pascal-case-format",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Verify band and festival names follow pascal case format",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 22
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I open the URL to get music festival data",
+            "result": {
+              "status": "passed",
+              "duration": 10091000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I verify URL is working",
+            "result": {
+              "status": "passed",
+              "duration": 765000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I verify that all band and music festival names should have pascal case format",
+            "result": {
+              "status": "failed",
+              "duration": 601000000,
+              "error_message": "AssertionError: TestCase failed at :: expected false to be true\n    + expected - actual\n\n    -false\n    +true\n\n    at http://localhost:4200/__cypress/tests?p=cypress\\integration\\features\\homePage.feature-380:127:65\n    at Array.forEach (<anonymous>)\n    at Context.<anonymous> (http://localhost:4200/__cypress/tests?p=cypress\\integration\\features\\homePage.feature-380:125:21)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
