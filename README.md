@@ -20,13 +20,13 @@ This project demonstrates how to use cypress test automation framework to test w
 
 ## To execute the automation suite:
 
-- Clone this repo
+- Clone this repository
 - Install dependencies
 ```
 cd cypress-test-automation-example
 npm install
 ```
-- To run test suite (This will run test suite with default cypress browser Electron)
+- To run test suite (This will run test suite with default cypress browser Electron in headless mode)
 ```
 npx cypress run
 ```
@@ -54,4 +54,4 @@ npx cypress run
 		npx cypress verify
 	```
 
-3. Error while laumching chrome browser in cypress test runner, just try re-running the test
+3. Error while launching chrome browser in cypress test runner, just try re-running the test
