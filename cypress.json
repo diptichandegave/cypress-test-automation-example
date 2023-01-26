@@ -1,13 +1,13 @@
 {
     "defaultCommandTimeout": 6000,
     "pageLoadTimeout": 20000,
-    "baseUrl": "http://google.com",
+    "baseUrl": "http://localhost:4200/festivals",
     "env": {
     "qa": {
       "url": "http://localhost:4200/festivals"
     },
     "dev": {
-      "url": "https://google.com"
+      "url": "http://localhost:4200/festivals"
     },
     "env": "qa"
   }

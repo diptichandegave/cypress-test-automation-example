@@ -1,29 +1,15 @@
-Prerequisite:
+# Cypress Test Automation Example
 
-Node.js should be installed on machine.
-Setup https://github.com/EATechnology/ea-coding-test-samples/tree/main/web this project and make sure 
-URL is up and running in browser.
+This project demonstrates how to use cypress test automation framework to test web application. This solution is tested with chrome and electron browsers.
 
-To execute the automation suite:
+## Prerequisite:
 
-- Clone this repo
-- `npm install` to install all req'd dependencies
-- `npm run generateHTMLReport` to generate BDD reports
-- `./node_modules/.bin/cypress open` to open cypress
-- `./node_modules/.bin/cypress run` to run test suite in cypress
+- Node.js (Download Link : https://nodejs.org/en/download/)
+- Chrome
+- To launch web application follow instructions on  https://github.com/EATechnology/ea-coding-test-samples/tree/main/web 
+- Make sure http://localhost:4200/festivals is up and running
 
-- While opening cypress if getting following errors then please follow below steps.
-1. If getting error about execution policy then
-	i. 	Open Windows Powershell with Run as Administrator
-	ii. Run command Set-ExecutionPolicy RemoteSigned
-	iii.Type 'Yes' 
-	iv. Again try running ./node_modules/.bin/cypress open
-	
-2. If getting error Cypress Verification Timed out then follow below steps.
-	i. At first just close the vscode and then after opening again try running ./node_modules/.bin/cypress open
-	ii. If not then run npx cypress verify command.
-	
-	
+## Cypress Directory Structure	
 - Feature Files should be under `cypress-test-automation-example\cypress\integration\features\*.feature*`.
 - Step definitions should be kept under `cypress-test-automation-example\cyprss\support\step_definitions\*.js`.
 - Config File should be kept under the folders `cypress-test-automation-example\cypress\plugins\index.js`.
@@ -31,3 +17,41 @@ To execute the automation suite:
 - Reports are generated under `cypress-test-automation-example\cypress\reports\*.xml` after test execution.
 - Results of the Reports are generated under `cypress-test-automation-example\cypress\results\cucumber-json\*.json` after test execution
 - Videos of Test Execution generated under `cypress-test-automation-example\cypress\videos\features\*.feature.mp4` after test execution.	
+
+## To execute the automation suite:
+
+- Clone this repo
+- Install dependencies
+```
+cd cypress-test-automation-example
+npm install
+```
+- To run test suite (This will run test suite with default cypress browser Electron)
+```
+npx cypress run
+```
+- To run test suite with cypress test runner and different browser
+	- Open cypress test runner
+	```
+	npx cypress open
+	```
+	- Execute test by clicking on feature file in cypress test runner
+- To generate BDD report
+ ```
+ npm run generateHTMLReport
+ ```
+
+## Troubleshooting Steps:
+- Below are some of the troubleshooting steps to be followed in case of different errors
+1. Error about execution policy
+	- Open Windows Powershell with Run as Administrator
+	- Run command Set-ExecutionPolicy RemoteSigned
+	- Type 'Yes' 
+	- Again try running ```npx cypress open```
+	
+2. Error Cypress Verification Timed out then follow below steps.
+	```
+		npx cypress verify
+	```
+
+3. Error while laumching chrome browser in cypress test runner, just try re-running the test
