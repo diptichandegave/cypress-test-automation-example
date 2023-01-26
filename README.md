@@ -1,6 +1,11 @@
 # Cypress Test Automation Example
 
-This project demonstrates how to use cypress test automation framework to test web application. This solution is tested with chrome and electron browsers.
+This project demonstrates how to use cypress test automation framework to test web application. This solution is tested with chrome and electron browsers which covers 
+following scenarios.
+- Verify when user open the URL it should work properly
+- Verify band and festival combination is unique
+- Verify each band should have music festival name
+- Verify band and festival names follow pascal case format
 
 ## Prerequisite:
 
@@ -40,6 +45,7 @@ npx cypress run
  ```
  npm run generateHTMLReport
  ```
+ - Once test execution is completed, video recording of execution can be found at 'cypress-test-automation-example\cypress\videos\features\' 
 
 ## Troubleshooting Steps:
 - Below are some of the troubleshooting steps to be followed in case of different errors
